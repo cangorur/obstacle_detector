@@ -1,0 +1,15 @@
+<launch>
+    <!-- Launch file arguments -->
+    <arg name="height_above_ground" default="0.44"/>  <!-- in meters, assumes a horizontally oriented RGB-D sensor; important for accurate detection -->
+    
+    <!-- TF frame IDs used by some detectors, and tracking components -->
+    <arg name="base_footprint_frame_id" default="base_link"/>  <!-- name of the robot's base frame after projection onto the ground plane -->
+    <arg name="world_frame_id" default="odom"/>  <!-- this is the fixed tracking frame -->
+
+    <!-- <node name="tf_base_footprint" pkg="tf" type="static_transform_publisher" args="0 0 $(arg height_above_ground) 0 0 0 $(arg base_footprint_frame_id) rgbd_front_top_link 10"/> -->
+    <node name="tf_odom"           pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 $(arg world_frame_id) $(arg base_footprint_frame_id) 10"/>
+    <!-- <node name="tf_laser"          pkg="tf2_ros" type="static_transform_publisher" args="0 0 $(arg height_above_ground) 0 0 0 $(arg base_footprint_frame_id) laser 10"/> -->
+
+    <!-- ##### End SECTION ##### -->
+
+</launch>
