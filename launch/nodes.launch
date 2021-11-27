@@ -53,7 +53,7 @@
     <param name="std_correspondence_dev"  value="0.15"/>
     <param name="process_variance"        value="0.1"/>  
     <param name="process_rate_variance"   value="0.1"/>  
-    <param name="measurement_variance"    value="20.0"/> 
+    <param name="measurement_variance"    value="500.0"/> 
     <!-- <param name="process_variance"        value="0.1"/>  
     <param name="process_rate_variance"   value="0.1"/>  
     <param name="measurement_variance"    value="1.0"/>  -->
